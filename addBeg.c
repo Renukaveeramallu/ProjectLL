@@ -1,0 +1,20 @@
+void beginsert()  
+{  
+    struct node *ptr;  
+    int item;  
+    ptr = (struct node *) malloc(sizeof(struct node *));  
+    if(ptr == NULL)  
+    {  
+        printf("\nOVERFLOW");  
+    }  
+    else  
+    {  
+        printf("\nEnter value\n");    
+        scanf("%d",&item);    
+        ptr->data = item;  
+        ptr->next = head;  
+        head = ptr;  
+        printf("\nNode inserted");  
+    }  
+      
+}  
